@@ -32,6 +32,7 @@ export default function Images({ src, classname, alt }) {
     };
   }, []);
 
+  
   return (
     <div ref={ref} className={classname}>
       {isVisible && <Image src={src} width={100} height={100} alt={alt} />}
