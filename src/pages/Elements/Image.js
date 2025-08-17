@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 
-export default function Images({ src, classname, alt }) {
+export default function Images({ src, classname, alt, width,height }) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,10 +32,18 @@ export default function Images({ src, classname, alt }) {
     };
   }, []);
 
-  
   return (
-    <div ref={ref} className={classname}>
-      {isVisible && <Image src={src} width={100} height={100} alt={alt} />}
+    <div ref={ref} className={classname} style={{display:'flex',alignItems:'center', justifyContent:'center'}}>
+      {isVisible && (
+        <Image
+          src={src}
+          height={height}
+          width={width}
+          style={{ width: "100%", height: "auto" }}
+          loading="lazy"
+          alt={alt}
+        />
+      )}
     </div>
   );
 }

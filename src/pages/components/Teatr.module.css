@@ -1,0 +1,143 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  position: relative;
+  max-height: 1200px;
+  background-color: black;
+}
+.slider {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  background: 
+    /* Серый градиент сверху слева */ linear-gradient(
+      135deg,
+      rgba(128, 128, 128, 0.184) 0%,
+      transparent 30%
+    ),
+    /* Серый градиент снизу справа */
+      linear-gradient(-45deg, rgba(128, 128, 128, 0.184) 0%, transparent 50%),
+    /* Основной фон */ black;
+  background-position: top left, bottom right, center;
+  background-size: 50%, 100%, 100% 100%;
+  background-repeat: no-repeat;
+}
+.people {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  left: 0;
+  right: 0;
+  max-width: 2000px;
+  margin: auto;
+  bottom: 0;
+}
+
+.people > img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.content {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+}
+.logoContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+.sliderContent {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  overflow-y: scroll;
+  margin: auto;
+}
+.sliderContent::-webkit-scrollbar {
+  display: none;
+}
+.subtitle,
+.memberName,
+.skillItem {
+  font-size: 13px;
+}
+.subtitle {
+  margin-top: 14px;
+}
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skillItem {
+  text-align: right;
+}
+.teamMember {
+  display: flex;
+  margin-top: 14px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sliderLogo > img {
+  max-width: 520px;
+}
+.sliderLogo {
+  width: 100%;
+  height: auto;
+}
+.reciept {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+.titlePart {
+  display: block;
+}
+.item {
+  text-align: center;
+}
+
+.title {
+  font-size: 14px;
+  margin-top: 14px;
+  text-align: center;
+}
+.text {
+  margin-top: 10px;
+  text-align: center;
+}
+.titleRequest {
+  text-align: center;
+  font-size: 40px;
+}
+.request {
+  padding: 8px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid white;
+  color: White;
+  font-size: 17px;
+}
+@media (max-width: 780px) {
+  .sliderContent {
+    width: 98%;
+  }
+  .slider {
+    width: 90%;
+  }
+  .logoContainer {
+    width: 90%;
+  }
+}
