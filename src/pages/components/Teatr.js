@@ -18,7 +18,7 @@ export default function Teatr() {
             </div>
             <h1 className={style.title}>
               <span className={style.titlePart}>HuntTeam Production</span>
-              <span className={style.titlePart}>Web-Studia 2025</span>
+              <span className={`${style.titlePart} ${style.light}`}>Web-Studia 2025</span>
             </h1>
             <h1 className={style.subtitle}>Разработчики</h1>
             <div className={style.teamMember}>
@@ -54,7 +54,7 @@ export default function Teatr() {
               </ul>
             </div>
             <div className={style.reciept}>
-              <atricle clasName={style.item}>
+              <atricle className={style.item}>
                 <h3 className={style.titleRequest}>Автошкола</h3>
                 <p className={style.text}>
                   С исполнителем очень легко было работать. Все замечания и
@@ -65,36 +65,38 @@ export default function Teatr() {
                   сотрудничество по развитию сайта)
                 </p>
               </atricle>
-              <atricle clasName={style.item}>
+              <atricle className={style.item}>
                 <h3 className={style.titleRequest}>Строительство</h3>
-                <p className={style.text}>Отличный дизайнер с ответственным подходом!</p>
+                <p className={style.text}>
+                  Отличный дизайнер с ответственным подходом!
+                </p>
                 <p className={style.text}>
                   Все отлично, не первый раз обращаюсь к данному специалисту,
                   выполняет работу качественно и раньше срока
                 </p>
               </atricle>
-              <atricle clasName={style.item}>
+              <atricle className={style.item}>
                 <h3 className={style.titleRequest}>Юрисдикция</h3>
                 <p className={style.text}>
                   Очень нравится оперативность и качество работы. Дизайнер
                   слышит все пожелания и воплощает их в работе
                 </p>
               </atricle>
-              <atricle clasName={style.item}>
+              <atricle className={style.item}>
                 <h3 className={style.titleRequest}>Строительство</h3>
                 <p className={style.text}>
                   Пизд#то, знаю что не наша верстка, но дизайн твой и он
                   охуе#ный
                 </p>
               </atricle>
-              <atricle clasName={style.item}>
+              <atricle className={style.item}>
                 <h3 className={style.titleRequest}>Финансы</h3>
                 <p className={style.text}>
                   Доброе утро, чекнул щас то что у тебя выходит, белая тема тоже
                   секс просто, цвета прям и стиль подобраны идеально
                 </p>
               </atricle>
-              <atricle clasName={style.item}>
+              <atricle className={style.item}>
                 <h3 className={style.titleRequest}>Вы</h3>
                 <p className={style.text}>
                   Можете сотрудничать с нами и оказаться здесь, написав нам
@@ -106,13 +108,13 @@ export default function Teatr() {
           </div>
         </div>
       </div>
-      {/* <Image
-          alt="Люди"
-          classname={style.people}
-          width={1894}
-          height={421}
-          src="/peoples.png"
-        /> */}
+      <Image
+        alt="Люди"
+        classname={style.people}
+        width={1894}
+        height={421}
+        src="/peoples.png"
+      />
     </article>
   );
 }

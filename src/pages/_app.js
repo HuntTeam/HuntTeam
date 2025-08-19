@@ -47,7 +47,7 @@ const unbounded = localFont({
   display: "swap",
 });
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <div className={unbounded.className}>
       <Component {...pageProps} />
@@ -55,4 +55,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default App;
