@@ -3,7 +3,7 @@ import Image from "../Elements/Image";
 
 export default function Teatr() {
   return (
-    <article className={style.container}>
+    <section className={style.container}>
       <div className={style.content}>
         <div className={style.slider}>
           <div className={style.sliderContent}>
@@ -115,6 +115,6 @@ export default function Teatr() {
         height={421}
         src="/peoples.png"
       />
-    </article>
+    </section>
   );
 }

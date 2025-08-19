@@ -48,7 +48,6 @@ export default function BG() {
         height={512}
         src={"/shadow.png"}
         width={667}
-        key={"Fon"}
       />
     </div>
   );

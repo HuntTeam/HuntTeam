@@ -3,7 +3,7 @@ import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
-    <article className={styles.hero}>
+    <section className={styles.hero}>
       <div className={styles.container}>
         <h2 className={styles.title}>Наша цель</h2>
         <div className={styles.subtitleWrapper}>
@@ -14,6 +14,6 @@ export default function Hero() {
         </div>
         <BG />
       </div>
-    </article>
+    </section>
   );
 }
