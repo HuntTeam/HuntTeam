@@ -1,5 +1,5 @@
 import style from "./About.module.css";
-
+import Images from "../Elements/Image";
 export default function About() {
   return (
     <section className={style.aboutSection}>
@@ -26,7 +26,211 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className={style.scroll_bg}>
+        <div className={style.scroll_container}>
+          {/* Первый набор картинок */}
+          <div className={style.img}>
+            <Images
+              alt="CMS"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/cms.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Dino"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/dino.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Image"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/image.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="KHA"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/kha.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Logo"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/logo.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Megafone"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/megafone.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Telegram"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/telegram.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="VPN"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/vpn.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Webdev"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/webdev.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Webhunt"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/webhunt.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="WWW"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/www.png"
+            />
+          </div>
+
+          {/* Повторяем набор для бесшовной анимации */}
+          <div className={style.img}>
+            <Images
+              alt="CMS"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/cms.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Dino"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/dino.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Image"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/image.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="KHA"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/kha.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Logo"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/logo.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Megafone"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/megafone.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Telegram"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/telegram.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="VPN"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/vpn.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Webdev"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/webdev.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="Webhunt"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/webhunt.png"
+            />
+          </div>
+          <div className={style.img}>
+            <Images
+              alt="WWW"
+              classname={style.imgItem}
+              height={155}
+              width={143}
+              src="/line/www.png"
+            />
+          </div>
+        </div>
+      </div>
       <div className={style.container}>
         <div className={style.contentWrapper}>
           <article className={style.card}>

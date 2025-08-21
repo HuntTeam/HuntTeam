@@ -3,6 +3,7 @@ import Teatr from "./components/Teatr";
 import Hero from "./components/Hero";
 import CTA from "./components/CTA";
 import About from "./components/About";
+import Uslugi from "./components/Uslugi";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <CTA />
         <About />
         <Hero />
+        <Uslugi />
         <Teatr />
       </main>
     </>

@@ -1,24 +1,58 @@
 .aboutSection {
   width: 100%;
   max-height: 1000px;
-  margin: auto;
-  padding: 50px 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   justify-content: space-between;
-  margin: 130px 0;
+  padding: 50px 0;
+  margin: 70px auto;
 }
 .container {
   max-width: 1380px;
   width: 90%;
-  height: 100px;
   margin: 0 auto;
 }
 .card {
   display: flex;
   flex-direction: column-reverse;
+}
+.scroll_bg {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.scroll_container {
+  display: flex;
+
+  white-space: nowrap;
+  animation: scroll 10s infinite linear;
+}
+
+.img {
+  flex: 0 0 auto;
+  padding: 0 10px;
+}
+
+.imgItem {
+  display: block;
+  height: 155px;
+  width: 143px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Сдвигаем на половину ширины */
+  }
 }
 .cardTitleRegion,
 .cardTitleClients,
@@ -32,10 +66,10 @@
   text-align: left;
 }
 .cardTitleRegion {
-    text-align: center;
+  text-align: center;
 }
 .cardTitleClients {
-    text-align: right;
+  text-align: right;
 }
 .cardNumber {
   color: rgba(255, 255, 255, 1);
@@ -80,7 +114,26 @@
 }
 @media (max-width: 780px) {
   .aboutSection {
-    height: 93vh;
+    height: fit-content;
     width: 95%;
+    max-height: fit-content;
+    padding: 0;
+    gap: 30px;
+  }
+  .contentWrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .img {
+    width: 30vw;
+  }
+  .contentWrapper > div {
+    width: 100%;
+  }
+  .card {
+    align-items: center;
+  }
+  .cardNumber {
+    font-size: 30vw;
   }
 }
