@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import CTA from "./components/CTA";
 import About from "./components/About";
 import Uslugi from "./components/Uslugi";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Uslugi />
         <Teatr />
       </main>
+      <Footer />
     </>
   );
 }

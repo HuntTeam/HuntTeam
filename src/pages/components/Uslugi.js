@@ -4,7 +4,7 @@ import style from "./Uslugi.module.css";
 
 export default function Uslugi() {
   return (
-    <section className={style.section}>
+    <section className={`${style.section} ${style.zoomable}`}>
       <GlassCursor />
       <div className={style.header}>
         <h2 className={style.title}>Услуги</h2>
@@ -105,7 +105,7 @@ export default function Uslugi() {
             </p>
           </article>
 
-          <article className={style.card}>
+          <article dataZoomable className={style.card}>
             <h3 className={style.cardTitle}>
               <a href="/#">Разработка логотипа</a>
             </h3>

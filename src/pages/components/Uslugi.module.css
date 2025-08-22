@@ -20,6 +20,7 @@
 .cursor {
   opacity: 0;
   width: 150px;
+  z-index: 3;
   aspect-ratio: 1/1;
   text-align: center;
   transition: 0.2s ease;
@@ -28,7 +29,6 @@
   border-radius: 50%;
   padding: 20px;
   align-items: center;
-  background-image: url();
   justify-content: center;
   border: 1px solid white;
   letter-spacing: 5%;
@@ -70,6 +70,8 @@
 .cardTitle {
   font-size: 30px;
   line-height: 110%;
+  position: relative;
+  z-index: 2;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
