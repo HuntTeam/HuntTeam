@@ -36,13 +36,19 @@ export default function Change() {
     "Ctrl+Alt+Delete",
     "01001000 01101001",
     "Ответ: 42",
+    "заделалем проект?",
+    "окей",
+    "git init",
+    "git add *",
+    "git commit -m 'first'",
+    "git push origin dev",
   ];
   useEffect(() => {
     let timer = setInterval(() => {
       setActive((prevActive) =>
         prevActive + 1 === array.length ? 0 : prevActive + 1
       );
-    }, 300);
+    }, 700);
 
     return () => {
       clearInterval(timer);

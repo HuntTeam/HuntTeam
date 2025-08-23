@@ -77,8 +77,8 @@
 @media (max-width: 760px) {
   .bottomSection {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* две колонки */
-    grid-template-rows: auto auto; /* две строки */
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
     gap: 20px;
   }
 

@@ -5,6 +5,7 @@ import CTA from "./components/CTA";
 import About from "./components/About";
 import Uslugi from "./components/Uslugi";
 import Footer from "./components/Footer";
+import Works from "./components/Works";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <About />
         <Hero />
         <Uslugi />
+        <Works />
         <Teatr />
       </main>
       <Footer />
