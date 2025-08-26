@@ -1,13 +1,18 @@
 .title {
   color: rgba(255, 255, 255, 1);
-  font-size: 50px;
+  font-size: 50px; font-family: Unbounded;
   font-weight: 300;
   line-height: 100%;
+
   letter-spacing: 0;
   text-align: left;
 }
 .colors {
+  max-width: 100%;
   position: absolute;
+}
+.colors > svg {
+  width: 100%;
 }
 
 .content {
@@ -25,7 +30,7 @@
 .subtitle {
   color: rgba(103, 103, 103, 1);
   font-family: Unbounded;
-  font-size: 30px;
+  font-size: 30px; font-family: Unbounded;
   font-weight: 500;
   line-height: 120%;
   letter-spacing: 1%;
@@ -44,5 +49,11 @@
   .content {
     height: 93vh;
     width: 95%;
+  }
+  .title {
+    font-size: 10vw; font-family: Unbounded;
+  }
+  .subtitle {
+    font-size: 7vw; font-family: Unbounded;
   }
 }

@@ -70,7 +70,7 @@
 .subtitle,
 .memberName,
 .skillItem {
-  font-size: 13px;
+  font-size: 13px; font-family: Unbounded;
   font-weight: 100;
 }
 .subtitle {
@@ -119,7 +119,7 @@
 }
 
 .title {
-  font-size: 14px;
+  font-size: 14px; font-family: Unbounded;
   margin-top: 14px;
   text-align: center;
 }
@@ -131,7 +131,7 @@
 }
 .titleRequest {
   text-align: center;
-  font-size: 30px;
+  font-size: 30px; font-family: Unbounded;
 }
 .request {
   padding: 8px;
@@ -141,7 +141,7 @@
   font-family: "Unbounded";
   border: 1px solid white;
   color: White;
-  font-size: 17px;
+  font-size: 17px; font-family: Unbounded;
 }
 @media (max-width: 780px) {
   .sliderContent {

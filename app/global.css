@@ -6,17 +6,28 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 li {
   list-style: none;
 }
 body::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 button {
   background: none;
   border: none;
   outline: none;
 }
+button:disabled {
+  opacity: 0.4;
+}
+
+section:not(:first-of-type) {
+  padding-top: 20px;
+}
+
 
 /* main {
   display: flex;

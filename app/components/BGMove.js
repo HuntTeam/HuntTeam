@@ -1,5 +1,7 @@
+'use client'
+
 import { useEffect, useRef, useState } from "react";
-import Image from "@/pages/Elements/Image";
+import Image from "../Elements/Image";
 import style from "./Hero.module.css";
 
 export default function BG() {

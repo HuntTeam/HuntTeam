@@ -26,9 +26,10 @@ export default function CTA() {
               width="751"
               height="586"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <floodOpacity floodOpacity="0" result="BackgroundImageFix" />
+
               <feBlend
                 mode="normal"
                 in="SourceGraphic"
@@ -48,15 +49,18 @@ export default function CTA() {
               y2="225"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#1100FF" />
-              <stop offset="1" stop-color="#FF0037" />
+              <stop stopColor="#1100FF" />
+
+              <stop offset="1" stopColor="#FF0037" />
             </linearGradient>
           </defs>
         </svg>
       </div>
       <div className={style.content}>
         <h1 className={style.title}>
-          Веб-студия создающая<br/>креативные веб-продукты
+          Веб-студия создающая
+          <br />
+          креативные веб-продукты
         </h1>
         <h2 className={style.subtitle}>
           <span className={style.white}>Цифровое</span>

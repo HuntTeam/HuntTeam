@@ -105,7 +105,7 @@ export default function Uslugi() {
             </p>
           </article>
 
-          <article dataZoomable className={style.card}>
+          <article  className={style.card}>
             <h3 className={style.cardTitle}>
               <a href="/#">Разработка логотипа</a>
             </h3>

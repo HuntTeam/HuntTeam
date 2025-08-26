@@ -40,10 +40,10 @@ const CounterTitle = () => {
       current += 2;
       setCount(current);
 
-      let delay = 100;
+      let delay = 50;
       if (current >= 45) {
-        const progress = (current - 45) / 5; // от 0 до 1
-        delay = 40 + Math.pow(progress, 2) * 200; // плавное замедление
+        const progress = (current - 45) / 5;
+        delay = 40 + Math.pow(progress, 2) * 200;
       }
 
       setTimeout(animateCount, delay);

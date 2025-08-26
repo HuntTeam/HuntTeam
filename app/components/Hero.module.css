@@ -62,14 +62,14 @@
   margin: auto;
 }
 .title {
-  font-size: 15px;
+  font-size: 15px; font-family: Unbounded;
   color: white;
 }
 .subtitle {
   margin-top: 15px;
   line-height: 100%;
   color: white;
-  font-size: 55px;
+  font-size: 55px; font-family: Unbounded;
 }
 .highlight {
   color: #ff0000;
@@ -87,13 +87,13 @@
     height: 93vh;
   }
   .title {
-    font-size: 3vw;
+    font-size: 3vw; font-family: Unbounded;
   }
   .container {
     width: 95%;
   }
   .subtitle {
-    font-size: 10vw;
+    font-size: 10vw; font-family: Unbounded;
   }
   .logo {
     width: 80%;

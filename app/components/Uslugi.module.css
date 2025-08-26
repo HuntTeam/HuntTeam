@@ -9,6 +9,9 @@
   align-items: flex-start;
   justify-content: space-between;
 }
+.zoomable {
+  position: relative;
+}
 .contaiverCursor {
   position: absolute;
   height: 100%;
@@ -25,6 +28,7 @@
   text-align: center;
   transition: 0.2s ease;
   font-size: 12px;
+  font-family: Unbounded;
   display: flex;
   border-radius: 50%;
   padding: 20px;
@@ -34,9 +38,10 @@
   letter-spacing: 5%;
   position: absolute;
 }
-.cursor:active {
+.cursorActive {
   width: 15px;
   font-size: 0;
+  font-family: Unbounded;
   aspect-ratio: 1/1;
   padding: 0;
   background: red;
@@ -44,6 +49,7 @@
 }
 .title {
   font-size: 12px;
+  font-family: Unbounded;
 }
 
 .flex {
@@ -69,6 +75,7 @@
 
 .cardTitle {
   font-size: 30px;
+  font-family: Unbounded;
   line-height: 110%;
   position: relative;
   z-index: 2;
@@ -80,6 +87,8 @@
 .cardTitle > a {
   color: white;
   text-decoration: none;
+  z-index: 99;
+  position: relative;
   transition: 0.4s easeкра;
 }
 .cardTitle > a:hover {
@@ -94,6 +103,7 @@
 }
 .cardText {
   font-size: 12px;
+  font-family: Unbounded;
   color: rgba(255, 255, 255, 0.438);
 
   font-weight: 100;

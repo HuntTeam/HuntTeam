@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  justify-content: space-between;
+  overflow-x: hidden;
   padding: 50px 0;
   margin: 70px auto;
 }
@@ -59,7 +59,7 @@
 .cardTitleOrders {
   color: rgba(255, 255, 255, 1);
 
-  font-size: 13px;
+  font-size: 13px; font-family: Unbounded;
   font-weight: 500;
   line-height: 0px;
   letter-spacing: 5%;
@@ -74,14 +74,14 @@
 .cardNumber {
   color: rgba(255, 255, 255, 1);
 
-  font-size: 150px;
+  font-size: 150px; font-family: Unbounded;
   font-weight: 500;
   letter-spacing: 1%;
   text-align: left;
 }
 .mainTitle {
   color: rgba(255, 255, 255, 1);
-  font-size: 12px;
+  font-size: 12px; font-family: Unbounded;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 1%;
@@ -89,14 +89,14 @@
 }
 .subtitle {
   color: rgba(255, 255, 255, 1);
-  font-size: 50px;
+  font-size: 50px; font-family: Unbounded;
   font-weight: 500;
   line-height: 100%;
   letter-spacing: 10%;
   text-align: left;
 }
 .description {
-  font-size: 10px;
+  font-size: 10px; font-family: Unbounded;
   font-weight: 200;
   color: white;
   text-align: left;
@@ -138,6 +138,6 @@
     align-items: center;
   }
   .cardNumber {
-    font-size: 30vw;
+    font-size: 30vw; font-family: Unbounded;
   }
 }

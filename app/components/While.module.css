@@ -1,0 +1,115 @@
+.whileSection {
+  width: 90%;
+  color: white;
+  cursor: s-resize;
+  max-height: 900px;
+  max-width: 1380px;
+
+  margin: auto;
+  margin: 50px auto;
+  height: 90vh;
+}
+.container {
+  display: flex;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.imgItem {
+  width: 35%;
+}
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  height: auto;
+  width: 500px;
+}
+.emptyDiv {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-weight: 200;
+  font-size: 11px;
+}
+
+.icon {
+  width: 35px;
+  aspect-ratio: 1/1;
+}
+.titleLine {
+  line-height: 100%;
+  color: white;
+  font-weight: 500;
+  font-size: 55px;
+  color: red;
+}
+.step {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  height: fit-content;
+}
+.none {
+  /* height: 0; */
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  display: none;
+  pointer-events: none; 
+}
+.imageWrapper {
+  height: 100%;
+  width: 100%;
+}
+.textWrapper {
+  text-align: right;
+}
+.stepTitle {
+  font-size: 33px;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+  font-weight: 400;
+  line-height: 100%;
+}
+.stepText {
+  font-weight: 200;
+  font-size: 13px;
+}
+.titleSubtitle {
+  font-weight: 500;
+  line-height: 130%;
+  color: white;
+  font-size: 50px;
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .titleLine,
+  .titleSubtitle {
+    font-size: 8vw;
+  }
+  .whileSection {
+    height: 77vh;
+  }
+  .emptyDiv {
+    top: 20%;
+  }
+  .stepTitle {
+    font-size: 6vw;
+  }
+  .step {
+    align-items: flex-start;
+  }
+  .imgItem {
+    width: 100%;
+  }
+}

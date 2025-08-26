@@ -64,11 +64,11 @@ export default function Footer() {
         </div>
 
         <a
-          href="mailto:order@huntteam.ru"
+          href="mailto:hello@huntteam.ru"
           className={style.emailLink}
           itemProp="email"
         >
-          order@huntteam.ru
+          hello@huntteam.ru
         </a>
       </div>
     </footer>

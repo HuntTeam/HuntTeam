@@ -1,5 +1,8 @@
-import "@/styles/globals.css";
 import localFont from "next/font/local";
+import "./global.css";
+import { metadata } from "./metadata";
+import Script from "next/script";
+export { metadata };
 
 const unbounded = localFont({
   src: [
@@ -46,13 +49,35 @@ const unbounded = localFont({
   ],
   display: "swap",
 });
-
-function App({ Component, pageProps }) {
+export default function RootLayout({ children }) {
   return (
-    <div className={unbounded.className}>
-      <Component {...pageProps} />
-    </div>
+    <html lang="en">
+      <body className={unbounded.className}>
+        {children}
+        <Script id="section-scroll" strategy="afterInteractive">
+          {`
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Скролл к началу секции
+            entry.target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  `}
+        </Script>
+      </body>
+    </html>
   );
 }
-
-export default App;

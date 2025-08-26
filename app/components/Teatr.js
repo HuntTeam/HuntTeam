@@ -1,4 +1,4 @@
-import style from "@/pages/components/Teatr.module.css";
+import style from "./Teatr.module.css";
 import Image from "../Elements/Image";
 
 export default function Teatr() {
@@ -54,7 +54,7 @@ export default function Teatr() {
               </ul>
             </div>
             <div className={style.reciept}>
-              <atricle className={style.item}>
+              <article className={style.item}>
                 <h3 className={style.titleRequest}>Автошкола</h3>
                 <p className={style.text}>
                   С исполнителем очень легко было работать. Все замечания и
@@ -64,8 +64,8 @@ export default function Teatr() {
                   работу над версткой. Полностью довольна, надеюсь на дальнейшее
                   сотрудничество по развитию сайта)
                 </p>
-              </atricle>
-              <atricle className={style.item}>
+              </article>
+              <article className={style.item}>
                 <h3 className={style.titleRequest}>Строительство</h3>
                 <p className={style.text}>
                   Отличный дизайнер с ответственным подходом!
@@ -74,36 +74,36 @@ export default function Teatr() {
                   Все отлично, не первый раз обращаюсь к данному специалисту,
                   выполняет работу качественно и раньше срока
                 </p>
-              </atricle>
-              <atricle className={style.item}>
+              </article>
+              <article className={style.item}>
                 <h3 className={style.titleRequest}>Юрисдикция</h3>
                 <p className={style.text}>
                   Очень нравится оперативность и качество работы. Дизайнер
                   слышит все пожелания и воплощает их в работе
                 </p>
-              </atricle>
-              <atricle className={style.item}>
+              </article>
+              <article className={style.item}>
                 <h3 className={style.titleRequest}>Строительство</h3>
                 <p className={style.text}>
                   Пизд#то, знаю что не наша верстка, но дизайн твой и он
                   охуе#ный
                 </p>
-              </atricle>
-              <atricle className={style.item}>
+              </article>
+              <article className={style.item}>
                 <h3 className={style.titleRequest}>Финансы</h3>
                 <p className={style.text}>
                   Доброе утро, чекнул щас то что у тебя выходит, белая тема тоже
                   секс просто, цвета прям и стиль подобраны идеально
                 </p>
-              </atricle>
-              <atricle className={style.item}>
+              </article>
+              <article className={style.item}>
                 <h3 className={style.titleRequest}>Вы</h3>
                 <p className={style.text}>
                   Можете сотрудничать с нами и оказаться здесь, написав нам
                   отзыв
                 </p>
                 <button className={style.request}>Заказать</button>
-              </atricle>
+              </article>
             </div>
           </div>
         </div>

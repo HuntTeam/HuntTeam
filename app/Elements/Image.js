@@ -10,11 +10,11 @@ export default function Images({ src, classname, alt, width, height }) {
     if (!ref.current) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries, observerInstance) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            console.log("Элемент в экране ✅");
+            observerInstance.unobserve(entry.target);
           }
         });
       },

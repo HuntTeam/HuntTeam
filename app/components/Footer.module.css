@@ -39,7 +39,7 @@
 .navLink {
   color: white;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 10px; font-family: Unbounded;
   line-height: 100%;
   letter-spacing: 5%;
 }
@@ -66,7 +66,7 @@
   white-space: none;
 
   width: 100%;
-  font-size: 13px;
+  font-size: 13px; font-family: Unbounded;
 }
 .emailLink {
   width: 100%;
