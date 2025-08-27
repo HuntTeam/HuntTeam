@@ -99,6 +99,7 @@
   }
   .whileSection {
     height: 77vh;
+    width: 95%;
   }
   .emptyDiv {
     top: 20%;
@@ -112,4 +113,5 @@
   .imgItem {
     width: 100%;
   }
+  
 }

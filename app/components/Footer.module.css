@@ -39,7 +39,8 @@
 .navLink {
   color: white;
   text-decoration: none;
-  font-size: 10px; font-family: Unbounded;
+  font-size: 10px;
+  font-family: Unbounded;
   line-height: 100%;
   letter-spacing: 5%;
 }
@@ -66,7 +67,8 @@
   white-space: none;
 
   width: 100%;
-  font-size: 13px; font-family: Unbounded;
+  font-size: 13px;
+  font-family: Unbounded;
 }
 .emailLink {
   width: 100%;
@@ -77,9 +79,13 @@
 @media (max-width: 760px) {
   .bottomSection {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto auto; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 20px;
+  }
+  .container,
+  .bottomSection {
+    width: 95%;
   }
 
   .location {

@@ -8,10 +8,12 @@ import Works from "./components/Works";
 import While from "./components/While";
 import Request from "./components/Request";
 import { metadata } from "./metadata";
+import Header from "./components/Header";
 export { metadata };
 export default function Home() {
   return (
     <>
+      <Header />
       <main style={{ background: "black" }}>
         <CTA />
         <About />

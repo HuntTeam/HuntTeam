@@ -1,6 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
+:root {
+  --red-dot: url("data:image/svg+xml;utf8,\
+<svg width='14' height='14' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>\
+<path d='M0.623804 0.60944L5.21574 17.8427L10.7835 12.2905L13.2621 14.7761L14.9524 13.0906L12.4737 10.605L17.8442 5.24937L0.623804 0.60944Z' fill='%23FF0000'/>\
+</svg>");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +34,6 @@ button:disabled {
 section:not(:first-of-type) {
   padding-top: 20px;
 }
-
 
 /* main {
   display: flex;

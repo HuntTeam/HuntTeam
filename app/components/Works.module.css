@@ -191,6 +191,7 @@
   }
   .section {
     height: fit-content;
+    width: 95%;
   }
   .separator,
   .clientName {

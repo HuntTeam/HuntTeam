@@ -6,6 +6,7 @@
   display: flex;
   align-items:center;
   flex-direction: column;
+  justify-content: center;
   cursor: auto;
   min-height: 100vh;
   color: white;
@@ -270,5 +271,8 @@
   }
   .pic {
     display: none;
+  }
+  .container {
+    width: 95%;
   }
 }

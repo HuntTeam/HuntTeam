@@ -21,6 +21,7 @@
   max-width: 1380px;
   height: 100vh;
   display: flex;
+  cursor: pointer !important;
   flex-direction: column-reverse;
   justify-content: space-between;
   padding: 50px 0;
@@ -34,6 +35,7 @@
   font-weight: 500;
   line-height: 120%;
   letter-spacing: 1%;
+  margin-top: 20px;
   text-align: left;
   text-transform: uppercase;
 }

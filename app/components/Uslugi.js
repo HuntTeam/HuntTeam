@@ -5,7 +5,7 @@ import style from "./Uslugi.module.css";
 export default function Uslugi() {
   return (
     <section className={`${style.section} ${style.zoomable}`}>
-      <GlassCursor />
+      {/* <GlassCursor /> */}
       <div className={style.header}>
         <h2 className={style.title}>Услуги</h2>
       </div>
@@ -16,7 +16,7 @@ export default function Uslugi() {
               <a href="/#">Разработка и запуск сайта любой сложности</a>
             </h3>
             <Images
-              alt={"в"}
+              alt={"Разработка дизайна"}
               classname={style.img}
               height={316}
               width={344}
@@ -41,7 +41,7 @@ export default function Uslugi() {
             </h3>
 
             <Images
-              alt={"в"}
+              alt={"Разработка телеграм ботов"}
               classname={style.img}
               height={316}
               width={344}
@@ -67,7 +67,7 @@ export default function Uslugi() {
             </h3>
 
             <Images
-              alt={"в"}
+              alt={"Разработка дизайна"}
               classname={style.img}
               height={316}
               width={344}
@@ -86,7 +86,7 @@ export default function Uslugi() {
             </h3>
 
             <Images
-              alt={"в"}
+              alt={"Разработка CMS"}
               classname={style.img}
               height={316}
               width={344}
@@ -111,7 +111,7 @@ export default function Uslugi() {
             </h3>
 
             <Images
-              alt={"в"}
+              alt={"Разработка логотипов"}
               classname={`${style.img} ${style.wfull}`}
               height={486}
               width={286}
