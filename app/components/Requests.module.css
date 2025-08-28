@@ -1,0 +1,320 @@
+.section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 100px auto;
+  align-items: center;
+}
+.container {
+  max-height: 900px;
+  margin: auto;
+  width: 95%;
+  max-width: 1380px;
+}
+.mark {
+  width: 72px;
+}
+.header,
+.content,
+.marks {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+}
+.submit {
+  width: 100vw;
+  background: red;
+  cursor: pointer;
+  font-family: "Unbounded";
+  font-weight: 500;
+  padding: 24px;
+  margin-top:50px;
+  text-align: center;
+  letter-spacing: 1%;
+  line-height: 95%;
+  font-size: clamp(23px, 5vw, 50px);
+
+  color: white;
+}
+.title {
+  font-size: clamp(20px, 40px, 80px);
+  letter-spacing: 1%;
+  line-height: 85%;
+}
+.title,
+.content {
+  width: 100%;
+}
+.marks {
+  gap: 15px;
+}
+.content {
+  gap: 40px;
+}
+.text {
+  font-size: clamp(10px, 12px, 15px);
+  line-height: 144%;
+  letter-spacing: 5%;
+  font-weight: 200;
+  text-align: left;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.svgLabel > svg {
+  width: 100%;
+  height: auto;
+}
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex > div {
+  width: 100%;
+}
+.mailContent {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: inherit;
+}
+.image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileInputa {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  opacity: 0;
+  right: 0;
+}
+.imges {
+  width: 140%;
+  height: auto;
+}
+.qu {
+  border: 1px solid #595959;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+.pink {
+  background: #6d39f4;
+  width: 105px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+}
+.noticeText {
+  font-size: clamp(9px, 10px, 11px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.41);
+  line-height: 130%;
+  letter-spacing: 5%;
+}
+.notice {
+  margin-top: 10px;
+}
+.noticeLink {
+  color: red;
+
+  text-decoration: none;
+}
+.qu > .text {
+  font-size: clamp(8px, 10px, 10px);
+  font-weight: 500;
+  line-height: 200%;
+  letter-spacing: 5%;
+  margin-top: -5px;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.fileInput {
+  display: flex;
+  border: 1px dashed white !important;
+  align-items: center;
+  padding: 20px !important;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+.input {
+  font-size: clamp(10px, 12px, 15px);
+  line-height: 100%;
+  letter-spacing: 5%;
+  font-weight: 500;
+  width: 100%;
+}
+.mt30 {
+  height: 40%;
+}
+.mt33 {
+  margin-top: 30px;
+}
+.mail {
+  display: flex;
+  margin-top: 40px;
+  align-items: stretch;
+  gap: 0px;
+  min-height: 450px;
+  justify-content: space-between;
+}
+.input {
+  background: none;
+  outline: none;
+  margin-top: 15px;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: "Unbounded";
+  padding: 0 10px 10px 0;
+  font-weight: 500;
+  font-size: clamp(12px, 13px, 15px);
+}
+.inputRande {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: left 0.2s ease, transform 0.2s ease; /* плавность */
+  cursor: pointer;
+} /* ТРЕК */
+.inputRande::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 6px;
+  background: red;
+}
+
+.inputRande::-moz-range-track {
+  height: 3px;
+  border-radius: 6px;
+  background: red;
+}
+
+.inputRande::-ms-track {
+  height: 3px;
+  border-radius: 6px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.inputRande::-ms-fill-lower {
+  background: red;
+  border-radius: 6px;
+}
+.inputRande::-ms-fill-upper {
+  background: red;
+  border-radius: 6px;
+}
+
+/* БЕГУНОК (шарик) */
+.inputRande::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  background: red
+    url('data:image/svg+xml;utf8,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.33014 2.12814H3.12319L4.02589 1.22544V9.63477H2.0067V0.726582H6.44891C7.10614 0.726582 7.66834 0.841399 8.13553 1.07103C8.60271 1.29275 8.963 1.60948 9.21639 2.02124C9.47769 2.42508 9.60835 2.90018 9.60835 3.44655C9.60835 3.985 9.47769 4.4601 9.21639 4.87186C8.963 5.27569 8.60271 5.59243 8.13553 5.82206C7.66834 6.04378 7.10614 6.15464 6.44891 6.15464H0.700165V4.75308H6.33014C6.71814 4.75308 7.023 4.63826 7.24471 4.40863C7.46643 4.17108 7.57728 3.85039 7.57728 3.44655C7.57728 3.03479 7.46643 2.7141 7.24471 2.48446C7.023 2.24691 6.71814 2.12814 6.33014 2.12814ZM0.688288 8.35199V7.11672H7.83859V8.35199H0.688288Z" fill="white"/></svg>')
+    no-repeat center;
+  margin-top: -7px; /* центрируем по полоске */
+  cursor: grab;
+}
+.inputRande::-webkit-slider-thumb::after {
+  position: absolute;
+  content: "₽";
+  color: white;
+}
+.priceNumber {
+  text-align: right;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1;
+  font-size: clamp(40px, 4.5vw, 50px);
+  font-family: Unbounded;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 15px;
+  text-overflow: ellipsis;
+}
+
+.inputRande::-moz-range-thumb {
+  width: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: red;
+  cursor: grab;
+  transition: transform 0.2s ease;
+}
+
+.inputRande::-ms-thumb {
+  width: 10px;
+  aspect-ratio: 1/1;
+  transition: transform 0.2s ease;
+  border-radius: 50%;
+  background: red;
+  cursor: grab;
+}
+.svgLabel {
+  width: 15px;
+  height: auto;
+}
+.label {
+  font-size: clamp(9px, 10px, 12px);
+  font-family: Unbounded;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.699);
+}
+@media (max-width: 780px) {
+  .container {
+    width: 95%;
+    max-height: fit-content;
+    height: 100%;
+  }
+  .header,
+  .mail,
+  .content {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .mail {
+    align-items: center;
+    height: 100%;
+  }
+  .content {
+    margin-top: 10px;
+  }
+  .marks {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .image {
+    width: 80%;
+  }
+}

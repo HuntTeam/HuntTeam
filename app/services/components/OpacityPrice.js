@@ -11,7 +11,7 @@ export default function OpacityPrice() {
     >
       <div className={style.container}>
         <h2 id="opacity-price-title" className={style.title}>
-          Прозрачные цены и сроки для вашего проекта
+          Прозрачные цены<br/>и сроки для<br/>вашего проекта
         </h2>
 
         <Images
@@ -19,7 +19,7 @@ export default function OpacityPrice() {
           classname={style.img}
           height={449}
           width={480}
-          src="/megafone.png"
+          src="/R.png"
           itemProp="image"
         />
 

@@ -1,16 +1,19 @@
 import Footer from "@/components/Footer";
-import OpacityPrice from "./components/OpacityPrice";
 import Header from "@/components/Header";
 import Request from "../components/Requests";
-
+import Landing from "./components/Landing";
+import Technology from "./components/Technology";
+import Founders from "./components/Developers";
 
 export default function Services() {
   return (
     <>
-      <Header title={"Услуги"} />
+      <Header title={"О студии"} />
 
       <main style={{ background: "black" }}>
-        <OpacityPrice />
+        <Landing />
+        <Technology />
+        <Founders />
         <Request />
       </main>
       <Footer />
