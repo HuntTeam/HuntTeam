@@ -31,6 +31,7 @@ export default function Founders() {
                 width={226}
                 src={"/designer.png"}
               />
+              <div className={style.monkey}></div>
             </div>
             <div className={style.founderLogo}>
               <Images
@@ -60,6 +61,7 @@ export default function Founders() {
                 width={226}
                 src={"/developer.png"}
               />
+              <div className={`${style.monkey} ${style.last}`}></div>
             </div>
             <div className={style.founderLogo}>
               <Images
