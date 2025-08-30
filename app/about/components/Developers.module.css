@@ -1,3 +1,4 @@
+/* ---------- БАЗОВЫЙ ЛЕЙАУТ ---------- */
 .section {
   width: 95%;
   margin: auto;
@@ -11,6 +12,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .title {
   font-size: 13px;
   margin-top: 7px;
@@ -20,70 +22,170 @@
   color: white;
   text-align: center;
 }
+
 .logo {
   width: 45px;
   margin: auto;
 }
-.foundersWrapper,
-.founderCard,
-.w50 {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-}
+
+/* ---------- ОБЁРТКА С ОСНОВНЫМИ КАРТОЧКАМИ ---------- */
 .foundersWrapper {
-  max-height: 350px;
-  height: 50vh;
   width: 100%;
-  justify-content: space-between;
+  height: 50vh;
   min-height: 200px;
+  max-height: 350px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
+
 .founderCard {
+  display: flex;
   gap: 20px;
   position: relative;
 }
+
+.w50 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  aspect-ratio: 1/1;
+  gap: 20px;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+/* ---------- ИЗОБРАЖЕНИЕ ---------- */
+.founderImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+
+.reverse {
+  width: auto;
+  height: 100%;
+}
+
+.reverse > img {
+  width: auto !important;
+  height: 100% !important;
+}
+
+.end {
+  justify-content: flex-start !important;
+  transform: scaleX(-1);
+}
+
+.last {
+  transform: scaleX(-1);
+}
+
+/* ---------- ИНФОБЛОК (ИМЯ / РОЛЬ) ---------- */
+.founderInfo {
+  position: absolute;
+  right: 110%;
+  width: 95%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 10px;
+
+  text-transform: uppercase;
+}
+
 .founderCard.reversed > .founderInfo {
   right: -100%;
   justify-content: flex-start;
   flex-direction: column;
 }
+
 .founderCard.reversed > .founderInfo * {
+  width: 100%;
   text-align: left;
-  width: 100%;
   flex-direction: column-reverse;
 }
-.founderImage {
-  width: 100%;
+
+.founderName,
+.founderRole {
+  font-size: clamp(20px, 30px, 50px);
+  font-weight: 600;
+  line-height: 95%;
+  letter-spacing: 1%;
+  text-align: right;
+}
+
+.founderRole {
   position: relative;
-  border: 1px solid white;
-  height: 100%;
+  display: inline-block;
+  color: #3a3a3a;
 }
-.founderInfo {
+
+/* ---------- ТЕКСТ ПРИ HOVER ---------- */
+.founderRole::after {
+  content: "FullStack";
   position: absolute;
-  display: flex;
-  text-transform: uppercase;
-  height: 100%;
-  gap: 10px;
-  right: 110%;
-  width: 95%;
-  flex-direction: column-reverse;
-  align-items: flex-end;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
+
+.founderRole:hover {
+  color: transparent;
+}
+
+.founderRole:hover::after {
+  opacity: 1;
+  color: #3a3a3a;
+}
+
+.reversed > .founderInfo > .founderRole::after {
+  content: "Каляка-маляка";
+  left: 0;
+  right: auto;
+}
+
+/* ---------- ЛОГО ---------- */
+.founderLogo {
+  width: 100%;
+}
+
+/* ---------- ЭФФЕКТ ЛУПЫ ---------- */
+.magnifier {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ---------- MONKEY СЛОЙ ---------- */
 .monkey {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: black;
-  top: 0;
-  bottom: 0;
-  background-image: url(/monkey.svg);
-  background-position: 50% 60%;
-  background-repeat: no-repeat;
+
+  background: black url(/monkey.svg) no-repeat 50% 60%;
   background-size: 90%;
-  right: 0;
-  left: 0;
+
   margin: auto;
+  pointer-events: none;
 }
+
 .founderImage::after {
   content: "Ищи тут";
   font-size: 12px;
@@ -96,87 +198,57 @@
   right: 10px;
   left: auto;
 }
-.last {
-  transform: scaleX(-1);
-  -ms-filter: "FlipV";
-}
-.w50 {
-  width: 100%;
-  justify-content: center;
-  aspect-ratio: 1/1;
-  gap: 20px;
-}
-.founderName,
-.founderRole {
-  font-size: clamp(20px, 30px, 50px);
-  font-weight: 600;
-  line-height: 95%;
-  letter-spacing: 1%;
-  text-align: right;
-}
-.founderRole {
-  color: #3a3a3a;
-}
-.founderLogo {
-  width: 100%;
-  margin-top: 30px;
-}
-.reverse {
-  height: 100%;
-  width: auto;
-}
-.start {
-  justify-content: flex-start !important;
-}
-.reversed {
-  flex-direction: row-reverse;
-}
-.end {
-  justify-content: flex-start !important;
-  transform: scaleX(-1);
-}
-.reverse > img {
-  height: 100% !important;
-  width: auto !important;
-}
 
+/* ---------- АДАПТИВ ---------- */
 @media (max-width: 780px) {
-  .foundersWrapper {
-    flex-direction: column;
-    gap: 20px;
-  }
   .section {
     margin-top: 100px;
-  }
-  .foundersWrapper,
-  .section {
     height: fit-content;
     max-height: fit-content;
   }
+
+  .foundersWrapper {
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    max-height: fit-content;
+  }
+
   .monkey {
     display: none;
   }
+
   .founderInfo {
-    right: 0 !important;
-    font-size: 10vw;
-    align-items: center;
     position: relative;
+    right: 0 !important;
+    align-items: center;
+    font-size: 10vw;
   }
+
   .founderInfo > * {
     font-size: 5vw;
     text-align: center !important;
   }
+
   .founderLogo {
     margin-top: 0;
   }
+
   .founderCard {
     flex-direction: column-reverse !important;
   }
+
   .reverse {
     width: 100%;
+  }
+  .founderImage::after {
+    display: none;
   }
   .reverse > img {
     width: 100% !important;
     height: auto !important;
+  }
+  .magnifier {
+    display: none;
   }
 }

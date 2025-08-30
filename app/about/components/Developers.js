@@ -1,5 +1,6 @@
 import Images from "app/Elements/Image";
 import style from "./Developers.module.css";
+import PicFound from "./PicFound";
 
 export default function Founders() {
   return (
@@ -22,27 +23,7 @@ export default function Founders() {
             <h3 className={style.founderName}>Ярослав Ушаков</h3>
             <h4 className={style.founderRole}>Веб-дизайнер</h4>
           </div>
-          <div className={`${style.w50}  ${style.reversed}`}>
-            <div className={style.founderImage}>
-              <Images
-                alt={"#"}
-                classname={style.reverse}
-                height={449}
-                width={226}
-                src={"/designer.png"}
-              />
-              <div className={style.monkey}></div>
-            </div>
-            <div className={style.founderLogo}>
-              <Images
-                alt={"#"}
-                classname={`${style.reverse} ${style.end}`}
-                height={449}
-                width={226}
-                src={"/cutlogo.svg"}
-              />
-            </div>
-          </div>
+          <PicFound dev={"designer"} isRevers={true} />
         </article>
 
         <div className={style.spacer}></div>
@@ -52,27 +33,7 @@ export default function Founders() {
             <h3 className={style.founderName}>Игорь Ушаков</h3>
             <h4 className={style.founderRole}>Программист</h4>
           </div>
-          <div className={style.w50}>
-            <div className={style.founderImage}>
-              <Images
-                alt={"#"}
-                classname={style.reverse}
-                height={449}
-                width={226}
-                src={"/developer.png"}
-              />
-              <div className={`${style.monkey} ${style.last}`}></div>
-            </div>
-            <div className={style.founderLogo}>
-              <Images
-                alt={"#"}
-                classname={`${style.reverse} ${style.start}`}
-                height={449}
-                width={226}
-                src={"/cutlogo.svg"}
-              />
-            </div>
-          </div>
+          <PicFound dev={"developer"} isRevers={false} />
         </article>
       </div>
     </section>
