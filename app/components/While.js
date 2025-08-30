@@ -24,6 +24,7 @@ export default function While() {
           брифинг
         </>
       ),
+      img: "coin.png",
       description: "Перенесем ваши мысли в качественное ТЗ",
     },
     {
@@ -33,6 +34,7 @@ export default function While() {
           характером
         </>
       ),
+      img: "spider.png",
       description: "создадим стиль, который запомнится",
     },
     {
@@ -42,6 +44,7 @@ export default function While() {
           адаптив
         </>
       ),
+      img: "laptop.png",
       description: "ваш сайт будет быстрым на любом устройстве",
     },
     {
@@ -51,6 +54,7 @@ export default function While() {
           настройка
         </>
       ),
+      img: "color.png",
       description: "поможем с доменом, хостингом и базовым SEO",
     },
     {
@@ -61,6 +65,7 @@ export default function While() {
           Поддержка
         </>
       ),
+      img: "cheel.png",
       description: "Будем поддерживать ваш сайт после публикации",
     },
   ];
@@ -133,7 +138,7 @@ export default function While() {
             classname={style.imgItem}
             height={522}
             width={583}
-            src="/megafone.svg"
+            src={`/${list[Math.max(0, Math.round(active))].img}`}
           />
           <div className={style.emptyDiv}>
             <span>{Math.max(1, Math.round(active) + 1)}</span>
