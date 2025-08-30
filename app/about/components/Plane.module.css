@@ -1,0 +1,114 @@
+.section {
+  width: 95%;
+  margin: auto;
+  max-width: 1380px;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  max-height: 1000px;
+  height: 90vh;
+}
+.title {
+  font-size: clamp(20px, 50px, 80px);
+  letter-spacing: 1%;
+  line-height: 85%;
+}
+
+.title > span {
+  color: red;
+}
+
+.left {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.stages {
+  width: 33.3%;
+}
+.stagesList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.list {
+  position: absolute;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  right: 10vw;
+  height: 100%;
+  aspect-ratio: 464/568;
+  background-image: url(/paper.png);
+  background-size: contain;
+  border-radius: 10px;
+  background-color: white;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  cursor: pointer;
+}
+.numStage {
+  color: red;
+  font-size: 110px;
+  font-weight: 600;
+}
+.list:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: 1;
+}
+.list:not(:first-child) > * {
+  position: relative;
+  z-index: 2;
+}
+
+.stagesItem {
+  width: 100%;
+}
+.books {
+  transform: rotate(-10deg);
+  position: relative;
+  max-height: 450px;
+  height: 100%;
+}
+.stagesButton {
+  padding-bottom: 15px;
+  color: white;
+  cursor: pointer;
+  font-family: Unbounded;
+  font-size: 12px;
+
+  margin-top: 26px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 5%;
+  line-height: 86%;
+  width: 100%;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+.titleStage {
+  font-size: clamp(10px, 12px, 15px);
+  font-weight: 600;
+  letter-spacing: 5%;
+  color: black;
+}
+.textStage {
+  font-size: clamp(8px, 10px, 12px);
+  font-weight: 400;
+  letter-spacing: 5%;
+  margin-top: 10px;
+  color: black;
+  line-height: 200%;
+}
+.active {
+  border-color: red;
+  color: white;
+}

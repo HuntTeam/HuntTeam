@@ -6,6 +6,7 @@ import Technology from "./components/Technology";
 import Founders from "./components/Developers";
 import Contacts from "./components/Contacts";
 import Partners from "./components/Partners";
+import Plane from "./components/Plane";
 
 export default function Services() {
   return (
@@ -14,6 +15,7 @@ export default function Services() {
 
       <main style={{ background: "black" }}>
         <Landing />
+        <Plane />
         <Technology />
         <Founders />
         <Partners />

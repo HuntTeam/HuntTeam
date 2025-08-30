@@ -12,7 +12,7 @@ export default function PicFound({ dev, isRevers, mirror = false }) {
   const [st, setSt] = useState({ x: 0, y: 0, show: false });
 
   const magnifierSize = 120; // диаметр лупы, px
-  const zoom = 2; // коэффициент увеличения в лупе
+  const zoom = 1; // коэффициент увеличения в лупе
 
   const onMove = (e) => {
     const el = imageRef.current;
