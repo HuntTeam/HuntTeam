@@ -8,18 +8,17 @@ import style from "./Developers.module.css";
  * Для простого "переворота колонок" через row-reverse mirror не нужен.
  */
 export default function PicFound({ dev, isRevers, mirror = false }) {
-  const imageRef = useRef(null);       // контейнер с фото
+  const imageRef = useRef(null); // контейнер с фото
   const [st, setSt] = useState({ x: 0, y: 0, show: false });
 
   const magnifierSize = 120; // диаметр лупы, px
-  const zoom = 2;            // коэффициент увеличения в лупе
+  const zoom = 2; // коэффициент увеличения в лупе
 
   const onMove = (e) => {
     const el = imageRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
 
-    // локальные координаты относительно блока с фото
     let x = e.clientX - rect.left;
     let y = e.clientY - rect.top;
 

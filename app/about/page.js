@@ -4,6 +4,8 @@ import Request from "../components/Requests";
 import Landing from "./components/Landing";
 import Technology from "./components/Technology";
 import Founders from "./components/Developers";
+import Contacts from "./components/Contacts";
+import Partners from "./components/Partners";
 
 export default function Services() {
   return (
@@ -14,6 +16,8 @@ export default function Services() {
         <Landing />
         <Technology />
         <Founders />
+        <Partners />
+        <Contacts />
         <Request />
       </main>
       <Footer />

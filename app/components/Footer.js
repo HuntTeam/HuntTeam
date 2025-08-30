@@ -47,7 +47,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className={style.navItem}>
-                <Link href="/contact" className={style.navLink}>
+                <Link href="/about#contacts" className={style.navLink}>
                   Связаться
                 </Link>
               </li>
