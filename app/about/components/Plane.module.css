@@ -79,6 +79,9 @@
   max-height: 450px;
   height: 100%;
 }
+.button:disabled {
+  opacity: 0.3;
+}
 .stagesButton {
   padding-bottom: 15px;
   color: white;
@@ -111,4 +114,70 @@
 .active {
   border-color: red;
   color: white;
+}
+.flex {
+  display: none;
+  gap: 20px;
+  width: 100%;
+  margin-top: 30px;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.textNoNone {
+  width: fit-content;
+}
+.textNoNone > .numStage {
+  display: block;
+  font-size: 8vh;
+}
+@media (max-width: 780px) {
+  .title {
+    font-size: 7vw;
+  }
+  .section {
+    height: fit-content;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .books {
+    width: 100%;
+    transform: none;
+    display: flex;
+    margin-top: 96px;
+    height: fit-content;
+    align-items: flex-end;
+  }
+  .list:not(:first-child) {
+    display: none;
+  }
+  .h100 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 180px;
+  }
+  .list {
+    transform: none !important;
+    right: 0;
+    position: relative;
+    aspect-ratio: auto;
+    justify-content: space-between;
+
+    background-size: auto;
+    height: fit-content !important;
+  }
+  .numStage {
+    display: none;
+  }
+  .stages {
+    width: 100%;
+  }
 }

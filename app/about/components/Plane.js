@@ -140,12 +140,74 @@ export default function Plane() {
               <span className={style.numStage}>
                 0{activePaper + index + 1}{" "}
               </span>
-              <div>
+              <div className={style.h100}>
                 <h4 className={style.titleStage}>{item.title}</h4>
                 <p className={style.textStage}>{item.text}</p>
               </div>
             </div>
           ))}
+      </div>
+      <div className={style.flex}>
+        <div className={style.textNoNone}>
+          <span className={style.numStage}>0{activePaper + 1} </span>
+        </div>
+        <div className={style.buttonContainer}>
+          <button
+            disabled={activePaper > 0 ? false : true}
+            className={style.button}
+            onClick={() => {
+              if (activePaper > 0) {
+                setPaper(activePaper - 1);
+              }
+            }}
+          >
+            <svg
+              className={style.svg}
+              width="38"
+              height="60"
+              viewBox="0 0 38 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className={style.path}
+                d="M33.5 55L8.5 30L33.5 5"
+                stroke="white"
+                strokeOpacity="0.41"
+                strokeWidth="12"
+              />
+            </svg>
+          </button>
+          <button
+            className={style.button}
+            disabled={
+              activePaper < plane[active].stages.length - 1 ? false : true
+            }
+            onClick={() => {
+              const maxPaper = plane[active].stages.length;
+              if (activePaper < maxPaper - 1) {
+                setPaper(activePaper + 1);
+              }
+            }}
+          >
+            <svg
+              className={style.svg}
+              width="38"
+              height="60"
+              viewBox="0 0 38 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className={style.path}
+                d="M4.5 5L29.5 30L4.5 55"
+                stroke="white"
+                strokeOpacity="0.41"
+                strokeWidth="12"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
       <div className={style.left}>
         <div className={style.stages}>
