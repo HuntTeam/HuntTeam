@@ -7,6 +7,7 @@ import Founders from "./components/Developers";
 import Contacts from "./components/Contacts";
 import Partners from "./components/Partners";
 import Plane from "./components/Plane";
+import Mission from "./components/Mission";
 
 export default function Services() {
   return (
@@ -18,6 +19,7 @@ export default function Services() {
         <Plane />
         <Technology />
         <Founders />
+        <Mission />
         <Partners />
         <Contacts />
         <Request />

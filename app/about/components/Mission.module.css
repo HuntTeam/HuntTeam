@@ -1,0 +1,207 @@
+.section {
+  max-width: 1380px;
+  margin:  auto;
+  color: white;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 95%;
+  margin-top: 100px;
+}
+.header,
+.missionContent,
+.iconsWrapper,
+.content,
+.title {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+}
+.textBlock,
+.missionBlock,
+.defaultPic {
+  width: 33.3%;
+}
+
+.paragraph {
+  font-size: clamp(8px, 10px, 12px);
+  text-align: left;
+  line-height: 200%;
+  letter-spacing: 5%;
+}
+
+.subtitle {
+  font-size: clamp(20px, 35px, 40px);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 45px;
+}
+.title {
+  font-size: clamp(8px, 10px, 12px);
+  font-weight: 200;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  gap: 5px;
+  mix-blend-mode: multiply; /* Blends text with the video background */
+}
+.section {
+  max-width: 1380px;
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 95%;
+}
+.header,
+.missionContent,
+.iconsWrapper,
+.content,
+.title {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+}
+.textBlock,
+.missionBlock,
+.defaultPic {
+  width: 33.3%;
+}
+
+.paragraph {
+  font-size: clamp(8px, 10px, 12px);
+  text-align: left;
+  line-height: 200%;
+  letter-spacing: 5%;
+}
+
+.subtitle {
+  font-size: clamp(20px, 35px, 40px);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 45px;
+}
+.realyTitle {
+  font-size: clamp(30px, 15vw, 130px);
+  line-height: 95%;
+  text-transform: uppercase;
+  margin-bottom: -15px;
+  font-weight: 500;
+  letter-spacing: 1%;
+  position: relative;
+  z-index: 99;
+}
+.title {
+  font-size: clamp(8px, 10px, 12px);
+  font-weight: 200;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  gap: 5px;
+  color: white; /* Or transparent, depending on desired effect */
+  mix-blend-mode: multiply; /* Blends text with the video background */
+}
+.textAndVideo {
+  width: 66.6%;
+  position: relative;
+}
+.video {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 3;
+}
+.content {
+  align-items: flex-end;
+  margin-top: 100px;
+}
+.missionContent {
+  margin-top: 10px;
+}
+
+.iconsWrapper {
+  height: 25px;
+  gap: 6px;
+}
+
+.mini,
+.mini > img {
+  height: 100% !important;
+}
+
+.content {
+  align-items: flex-end;
+  margin-top: 100px;
+}
+.missionContent {
+  margin-top: 10px;
+}
+
+.iconsWrapper {
+  height: 25px;
+  gap: 6px;
+}
+
+.mini,
+.mini > img {
+  height: 100% !important;
+}
+
+@media (max-width: 780px) {
+  .header,
+  .missionContent {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .textBlock,
+  .missionBlock {
+    width: 100%;
+  }
+  .section {
+    height: 90vh;
+  }
+  .subtitle {
+    font-size: 30px;
+    text-align: right;
+    line-height: 100%;
+  }
+  .mini {
+    width: 40%;
+  }
+  .defaultPic {
+    width: 50% !important;
+    position: relative;
+    z-index: 999;
+  }
+  .horn {
+    width: 100%;
+  }
+  .textAndVideo {
+    width: 50%;
+    position: static;
+    height: -webkit-fill-available;
+  }
+  .content {
+    gap: 0;
+    position: relative;
+  }
+  .video {
+    right: 0%;
+    width: 135%;
+  }
+  .realyTitle {
+    margin: 0;
+    max-width: 100%;
+    position: absolute;
+    bottom: -4px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    font-size: 15vw;
+  }
+}

@@ -38,6 +38,7 @@
 .list {
   position: absolute;
   padding: 20px;
+  user-select: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -169,6 +170,7 @@
     right: 0;
     position: relative;
     aspect-ratio: auto;
+
     justify-content: space-between;
 
     background-size: auto;

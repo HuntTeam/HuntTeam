@@ -20,6 +20,10 @@
 .imgItem {
   width: 35%;
 }
+.imgItem > img {
+  max-height: 400px;
+  width: auto;
+}
 .imageWrapper {
   display: flex;
   align-items: center;

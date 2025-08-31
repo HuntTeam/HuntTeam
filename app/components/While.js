@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { act, useEffect, useRef, useState } from "react";
 import Images from "../Elements/Image";
 import style from "./While.module.css";
 const lockScroll = () => {
@@ -138,7 +138,10 @@ export default function While() {
             classname={style.imgItem}
             height={522}
             width={583}
-            src={`/${list[Math.max(0, Math.round(active))].img}`}
+            src={`/${
+              list[Math.min(Math.max(Math.round(active), 0), list.length - 1)]
+                .img
+            }`}
           />
           <div className={style.emptyDiv}>
             <span>{Math.max(1, Math.round(active) + 1)}</span>
