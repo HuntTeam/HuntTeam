@@ -114,7 +114,12 @@
   text-align: left;
   flex-direction: column-reverse;
 }
-
+.monkey {
+  transform: rotateY(180deg);
+}
+.reversed > div > .monkey {
+  transform: rotateY(0deg);
+}
 .founderName,
 .founderRole {
   font-size: clamp(20px, 30px, 50px);

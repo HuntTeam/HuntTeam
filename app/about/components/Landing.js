@@ -19,11 +19,11 @@ export default function Landing() {
       </div>
 
       <div className={style.flex}>
-        <h1 className={style.h1}>
+        <h2 className={style.h1}>
           Супер креативная и молодая digiatal-студия из Абакана, которая своими
           работами показывает, что в этом мире осталось что-то прекрасное
-        </h1>
-        <h2 className={style.h2}>
+        </h2>
+        <h3 className={style.h2}>
           На что
           <br />
           способна
@@ -31,7 +31,7 @@ export default function Landing() {
           студия из
           <br />
           двух человек
-        </h2>
+        </h3>
       </div>
     </section>
   );

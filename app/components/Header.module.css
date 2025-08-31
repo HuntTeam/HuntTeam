@@ -14,6 +14,9 @@
   background-color: rgba(0, 0, 0, 0.637);
   cursor: var(--red-dot) 5 5, auto;
 }
+.header.active {
+  height: 100%;
+}
 .menu {
   font-size: clamp(10px, 15px, 20px);
   font-weight: 500;

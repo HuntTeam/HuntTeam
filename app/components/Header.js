@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import style from "./Header.module.css";
+import HeaderCursor from "./HeaderCursor";
 
 export default function Header({ title }) {
   const [isActive, setIsActive] = useState(false);
@@ -27,6 +28,7 @@ export default function Header({ title }) {
   return (
     <header className={`${style.header} ${isActive ? style.active : ""}`}>
       <nav className={style.nav} aria-label="Основная навигация">
+        {/* <HeaderCursor /> */}
         <Link href="/" className={`${style.logoLink} ${isActive ? "mob" : ""}`}>
           <Image
             alt="Логотип веб-студии HuntTeam"
@@ -37,7 +39,7 @@ export default function Header({ title }) {
             className={style.logo}
           />
         </Link>
-        {!isActive && title && (
+        {title && (
           <p className={style.titlePage} onClick={toggleActive}>
             {title}
           </p>
