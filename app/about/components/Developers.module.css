@@ -137,7 +137,7 @@
 
 /* ---------- ТЕКСТ ПРИ HOVER ---------- */
 .founderRole::after {
-  content: "FullStack";
+  content: "Багинатор";
   position: absolute;
   top: 0;
   right: 0;

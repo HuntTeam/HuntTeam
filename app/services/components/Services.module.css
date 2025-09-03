@@ -1,0 +1,132 @@
+.section {
+  max-width: 1380px;
+  width: 95%;
+  margin: auto;
+  color: white;
+  margin-top: 90px;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.underTitle {
+  font-size: clamp(10px, 12px, 15px);
+  font-weight: 600;
+  line-height: 200%;
+  letter-spacing: 5%;
+  text-align: left;
+}
+
+.serviceCard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details,
+.header {
+  width: 33.3%;
+}
+.titleService {
+  font-size: 12px;
+}
+.column {
+  display: grid;
+  gap: 15px;
+  margin: 5px 0 10px 0;
+}
+.one {
+  grid-template-columns: 1fr;
+}
+.two {
+  grid-template-columns: 1fr 1fr;
+}
+.three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.four {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.p {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: lighter;
+  line-height: 144%;
+  letter-spacing: 5%;
+  text-align: left;
+}
+.meta {
+  color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.time,
+.price {
+  display: flex;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.4);
+  flex-direction: column;
+}
+
+.priceValue,
+.timeValue {
+  font-size: clamp(30px, 2.4vw, 40px);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.title {
+  font-size: clamp(40px, 5vw, 70px);
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+  line-height: 105%;
+  text-transform: uppercase;
+}
+.timeLabel,
+.priceLabel {
+  font-size: clamp(10px, 12px, 15px);
+  font-weight: 300;
+  line-height: 144%;
+  letter-spacing: 5%;
+  text-align: left;
+}
+ .serviceCard:not(:first-of-type) {
+    margin-top: 40px;
+  }
+@media (max-width: 780px) {
+  .serviceCard {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+  .container {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .meta {
+    margin-top: 10px;
+  }
+  .underTitle{
+    font-size: 20px;
+  }
+  .details,
+  .header {
+    width: inherit;
+  }
+  .one {
+    grid-template-columns: 1fr;
+  }
+  .column{
+    gap:10px;
+  }
+  .two,
+  .three,
+  .four {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  
+}

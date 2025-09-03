@@ -11,17 +11,25 @@ export default function OpacityPrice() {
     >
       <div className={style.container}>
         <h2 id="opacity-price-title" className={style.title}>
-          Прозрачные цены<br/>и сроки для<br/>вашего проекта
+          Прозрачные цены
+          <br />и сроки для
+          <br />
+          вашего проекта
         </h2>
 
-        <Images
-          alt="Прозрачные цены и сроки разработки сайтов — визуальная иллюстрация"
-          classname={style.img}
+        <video
+          className={style.img}
           height={449}
           width={480}
-          src="/R.png"
-          itemProp="image"
-        />
+          autoPlay
+          muted
+          loop
+          playsInline
+          itemProp="video"
+        >
+          <source src="/R.webm" type="video/webm" />
+          Ваш браузер не поддерживает видео в формате WebM.
+        </video>
 
         <p className={style.text} itemProp="description">
           На этой странице представлены ориентировочные цены на разработку
