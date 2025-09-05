@@ -208,6 +208,7 @@ export default function ServiceSection() {
         Что мы умеем
       </h2>
 
+
       <div className={style.container}>
         {services.map((item, index) => (
           <article
