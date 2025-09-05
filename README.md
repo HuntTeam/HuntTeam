@@ -15,8 +15,6 @@
 
 ## 🌐 Контакты и ссылки
 
-[https://vk.com/hunteam_ru](VK)
-
-[https://vk.com/hunteam_ru](Telegram)
-
-[https://huntteam.ru](huntteam.ru)
+- [VK](https://vk.com/huntteam_ru)  
+- [Telegram](https://t.me/huntteam_ru)  
+- [Сайт](https://huntteam.ru)
