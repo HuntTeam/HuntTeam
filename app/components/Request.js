@@ -1,5 +1,20 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import style from "./Request.module.css";
+import { useQuery } from "@tanstack/react-query";
+import { requestApplication } from "app/api/request";
 export default function Request() {
+  const [requestData, setRequestData] = useState({
+    link: "",
+    file: null,
+    message: "",
+    price: 666667,
+  });
+  const { error, isError, isSuccess, isLoading } = useQuery({
+    queryKey: ["application"],
+    queryFn: () => requestApplication(requestData),
+  });
   return (
     <section className={style.container}>
       <div className={style.header}>
@@ -124,6 +139,12 @@ export default function Request() {
                 className={style.input}
                 type="text"
                 id="link"
+                value={requestData.link}
+                onChange={(e) =>
+                  setRequestData((prev) => {
+                    return { ...prev, link: e.target.value };
+                  })
+                }
                 required
                 placeholder="Вставьте ссылку"
               />
@@ -138,39 +159,49 @@ export default function Request() {
             <div className={`${style.input} ${style.fileInput}`}>
               <div className={style.center}>
                 <p className={style.text}>
-                  Перетяните файл и<br />
-                  положите в это поле
+                  {requestData.file?.name || (
+                    <>
+                      Перетяните файл и<br /> положите в это поле
+                    </>
+                  )}
                 </p>
-                <div>
-                  <svg
-                    width="27"
-                    height="25"
-                    viewBox="0 0 27 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.5001 0.288086V17.6214M13.5001 17.6214L18.6213 12.5892M13.5001 17.6214L8.37891 12.5892"
-                      stroke="white"
-                      strokeWidth="0.5"
-                    />
-                    <path
-                      d="M0.5 19.9854H26.5"
-                      stroke="white"
-                      strokeWidth="0.5"
-                    />
-                    <path
-                      d="M5.62109 24.7129H21.3787"
-                      stroke="white"
-                      strokeWidth="0.5"
-                    />
-                  </svg>
-                </div>
+                {!requestData.file?.name && (
+                  <div>
+                    <svg
+                      width="27"
+                      height="25"
+                      viewBox="0 0 27 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.5001 0.288086V17.6214M13.5001 17.6214L18.6213 12.5892M13.5001 17.6214L8.37891 12.5892"
+                        stroke="white"
+                        strokeWidth="0.5"
+                      />
+                      <path
+                        d="M0.5 19.9854H26.5"
+                        stroke="white"
+                        strokeWidth="0.5"
+                      />
+                      <path
+                        d="M5.62109 24.7129H21.3787"
+                        stroke="white"
+                        strokeWidth="0.5"
+                      />
+                    </svg>
+                  </div>
+                )}
               </div>
               <input
                 type="file"
                 id="file"
                 name="file"
+                onChange={(e) =>
+                  setRequestData((prev) => {
+                    return { ...prev, file: e.target.files[0] };
+                  })
+                }
                 className={style.fileInputa}
                 accept=".pdf,.doc,.docx,.txt"
               />
@@ -187,8 +218,14 @@ export default function Request() {
         <div className={style.price}>
           <div className={style.relative}>
             <textarea
-              name=""
-              id=""
+              name="about"
+              id="about_company"
+              value={requestData.message}
+              onChange={(e) =>
+                setRequestData((prev) => {
+                  return { ...prev, message: e.target.value };
+                })
+              }
               className={`${style.input} ${style.textarea}`}
               placeholder="Расскажите о компании в двух словах"
             ></textarea>
@@ -217,15 +254,26 @@ export default function Request() {
             <input
               type="range"
               className={style.inputRande}
-              min={500}
-              defaultValue={666666}
-              max={10000000}
+              min={5000}
+              value={requestData.price}
+              onChange={(e) =>
+                setRequestData((prev) => {
+                  return { ...prev, price: e.target.value };
+                })
+              }
+              max={1000000}
               name="price"
               id="price"
             />
-            <p className={style.priceNumber}>10 050 000</p>
+            <p className={style.priceNumber}>
+              {requestData.price
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+            </p>
           </div>
-          <button type="submit" className={style.submit} disabled>Отправить</button>
+          <button type="submit" className={style.submit} disabled>
+            Отправить
+          </button>
         </div>
       </form>
     </section>

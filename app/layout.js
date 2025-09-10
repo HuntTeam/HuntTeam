@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./global.css";
 import { metadata } from "./metadata";
 import Script from "next/script";
+import ReactQueryClientProvider from "./providers/ReactQueryClientProvider";
 export { metadata };
 
 const unbounded = localFont({
@@ -53,11 +54,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={unbounded.className}>
-        {children}
+        <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
         <Script id="section-scroll" strategy="afterInteractive">
           {`
     const sections = document.querySelectorAll("section");
-
+    
     const observer = new IntersectionObserver(
       function(entries) {
         entries.forEach(entry => {
