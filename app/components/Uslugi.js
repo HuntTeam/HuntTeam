@@ -37,7 +37,7 @@ export default function Uslugi() {
 
           <article className={style.card}>
             <h3 className={style.cardTitle}>
-              <a href="/#">Создание Телеграмм ботов</a>
+              <a href="/#">Создание Телеграм ботов</a>
             </h3>
 
             <Images

@@ -34,7 +34,7 @@ export default function Media() {
           </h2>
           <p className={style.description}>
             Если интересна наша цифровая жизнь, следите и подписывайтесь на
-            ТикТок и Телеграмм
+            ТикТок и Телеграм
           </p>
         </header>
 
@@ -57,7 +57,7 @@ export default function Media() {
           <article
             className={`${style.qrBlock} ${isActive ? style.active : ""}`}
           >
-            <h3 className={style.qrTitle}>Телеграмм</h3>
+            <h3 className={style.qrTitle}>Телеграм</h3>
             <Images
               alt="QR-код для подписки на официальный Telegram HuntTeam"
               classname={style.img}

@@ -2,19 +2,33 @@
 
 import { useEffect, useState } from "react";
 import style from "./Request.module.css";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { requestApplication } from "app/api/request";
 export default function Request() {
   const [requestData, setRequestData] = useState({
     link: "",
     file: null,
     message: "",
+    client_name: "Без имени",
     price: 666667,
   });
-  const { error, isError, isSuccess, isLoading } = useQuery({
-    queryKey: ["application"],
-    queryFn: () => requestApplication(requestData),
+  const { error, isError, isSuccess, isLoading, mutate } = useMutation({
+    mutationKey: ["application"],
+    mutationFn: () => requestApplication(requestData),
   });
+  async function handleSendRequest(e) {
+    e.preventDefault();
+    if (requestData.link.length >= 5 || requestData.message.length >= 5) {
+      await mutate();
+      await setRequestData({
+        link: "",
+        file: null,
+        message: "",
+        client_name: "Без имени",
+        price: 666667,
+      });
+    }
+  }
   return (
     <section className={style.container}>
       <div className={style.header}>
@@ -59,8 +73,14 @@ export default function Request() {
             </div>
 
             <div className={`${style.heading} ${style.inpAndSvgs}`}>
-              <div className={style.svgs}>
-                <div>
+              <div className={`${style.svgs}`}>
+                <div
+                  className={
+                    /^https?:\/\/t\.me|^t\.me/.test(requestData.link ?? "")
+                      ? style.active
+                      : ""
+                  }
+                >
                   <svg
                     width="19"
                     height="16"
@@ -76,7 +96,13 @@ export default function Request() {
                     />
                   </svg>
                 </div>
-                <div>
+                <div
+                  className={
+                    /^https?:\/\/vk\.com|^vk\.com/.test(requestData.link ?? "")
+                      ? style.active
+                      : ""
+                  }
+                >
                   <svg
                     width="25"
                     height="16"
@@ -90,7 +116,15 @@ export default function Request() {
                     />
                   </svg>
                 </div>
-                <div>
+                <div
+                  className={
+                    /^https?:\/\/tenchat\.ru|^tenchat\.ru/.test(
+                      requestData.link ?? ""
+                    )
+                      ? style.active
+                      : ""
+                  }
+                >
                   <svg
                     width="17"
                     height="16"
@@ -116,7 +150,13 @@ export default function Request() {
                     </defs>
                   </svg>
                 </div>
-                <div>
+                <div
+                  className={
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(requestData.link ?? "")
+                      ? style.active
+                      : ""
+                  }
+                >
                   <svg
                     width="22"
                     height="16"
@@ -271,7 +311,16 @@ export default function Request() {
                 .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
             </p>
           </div>
-          <button type="submit" className={style.submit} disabled>
+          <button
+            type="submit"
+            className={style.submit}
+            onClick={handleSendRequest}
+            disabled={
+              requestData.link.length <= 5 ||
+              requestData.message.length <= 5 ||
+              isLoading
+            }
+          >
             Отправить
           </button>
         </div>
