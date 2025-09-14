@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import style from "./Request.module.css";
 import { useMutation } from "@tanstack/react-query";
 import { requestApplication } from "app/api/request";
 export default function Request() {
+  const [showModal, setShowModal] = useState(false);
   const [requestData, setRequestData] = useState({
     link: "",
     file: null,
@@ -12,7 +13,7 @@ export default function Request() {
     client_name: "Без имени",
     price: 666667,
   });
-  const { error, isError, isSuccess, isLoading, mutate } = useMutation({
+  const { isError, isSuccess, isLoading, mutate } = useMutation({
     mutationKey: ["application"],
     mutationFn: () => requestApplication(requestData),
   });
@@ -20,6 +21,7 @@ export default function Request() {
     e.preventDefault();
     if (requestData.link.length >= 5 || requestData.message.length >= 5) {
       await mutate();
+      setShowModal(true);
       await setRequestData({
         link: "",
         file: null,
@@ -27,10 +29,24 @@ export default function Request() {
         client_name: "Без имени",
         price: 666667,
       });
+      setTimeout(() => setShowModal(false), 3000);
     }
   }
   return (
     <section className={style.container}>
+      <div className={`${style.modal} ${showModal ? style.open : ""}`}>
+        <div>
+          {isError && (
+            <p>
+              Произошла ошибка при отправке
+              <br />
+              Заполните форму правильно
+            </p>
+          )}
+        </div>
+
+        <div>{isSuccess && <p>Заявка отправлена успешно!</p>}</div>
+      </div>
       <div className={style.header}>
         <div className={style.w75}>
           <h2 className={style.title}>
@@ -316,8 +332,8 @@ export default function Request() {
             className={style.submit}
             onClick={handleSendRequest}
             disabled={
-              requestData.link.length <= 5 ||
-              requestData.message.length <= 5 ||
+              requestData.link.trim().length <= 5 ||
+              requestData.message.trim().length <= 5 ||
               isLoading
             }
           >

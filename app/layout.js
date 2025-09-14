@@ -76,6 +76,7 @@ export default function RootLayout({ children }) {
     );
 
     sections.forEach(section => observer.observe(section));
+    document.querySelectorAll('video').forEach(v => { v.setAttribute('pip', 'false'); })
   `}
         </Script>
       </body>

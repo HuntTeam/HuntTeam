@@ -65,7 +65,7 @@ export default function Header({ title }) {
           </li>
           <li className={style.navItem}>
             <Link
-              href="/cases"
+              href="/portfolio"
               className={`${style.navLink} ${style.linkCases}`}
             >
               Кейсы

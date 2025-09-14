@@ -1,9 +1,56 @@
+"use client";
+
 import Images from "app/Elements/Image";
 import style from "./Requests.module.css";
+import { useState } from "react";
+import { requestApplication } from "app/api/request";
+import { useMutation } from "@tanstack/react-query";
 
 export default function Request() {
+  const [requestData, setRequestData] = useState({
+    link: "",
+    file: null,
+    client_name: "",
+    price: 666667,
+  });
+  const [showModal, setShowModal] = useState(false);
+
+  async function handleSendRequest(e) {
+    e.preventDefault();
+    if (
+      requestData.link.length >= 5 ||
+      !!requestData.client_name.trim().length
+    ) {
+      await mutate();
+      setShowModal(true);
+      await setRequestData({
+        link: "",
+        file: null,
+        client_name: "",
+        price: 666667,
+      });
+      setTimeout(() => setShowModal(false), 3000);
+    }
+  }
+  const { isError, isSuccess, isLoading, mutate } = useMutation({
+    mutationKey: ["application"],
+    mutationFn: () => requestApplication(requestData),
+  });
   return (
     <section className={style.section}>
+      <div className={`${style.modal} ${showModal ? style.open : ""}`}>
+        <div>
+          {isError && (
+            <p>
+              Произошла ошибка при отправке
+              <br />
+              Заполните форму правильно
+            </p>
+          )}
+        </div>
+
+        <div>{isSuccess && <p>Заявка отправлена успешно!</p>}</div>
+      </div>
       <form method="POST" action={"/api/request"}>
         <div className={style.container}>
           <div className={style.header}>
@@ -60,6 +107,12 @@ export default function Request() {
                     type="text"
                     className={style.input}
                     placeholder="Имя"
+                    value={requestData.client_name}
+                    onChange={(e) =>
+                      setRequestData((prev) => {
+                        return { ...prev, client_name: e.target.value };
+                      })
+                    }
                     name="from"
                     required
                     id="from"
@@ -85,38 +138,48 @@ export default function Request() {
                 <div className={`${style.input} ${style.fileInput}`}>
                   <div className={style.center}>
                     <p className={style.text}>
-                      Перетяните файл и<br />
-                      положите в это поле
+                      {requestData.file?.name || (
+                        <>
+                          Перетяните файл и<br /> положите в это поле
+                        </>
+                      )}
                     </p>
-                    <div>
-                      <svg
-                        width="27"
-                        height="25"
-                        viewBox="0 0 27 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M13.5001 0.288086V17.6214M13.5001 17.6214L18.6213 12.5892M13.5001 17.6214L8.37891 12.5892"
-                          stroke="white"
-                          strokeWidth="0.5"
-                        />
-                        <path
-                          d="M0.5 19.9854H26.5"
-                          stroke="white"
-                          strokeWidth="0.5"
-                        />
-                        <path
-                          d="M5.62109 24.7129H21.3787"
-                          stroke="white"
-                          strokeWidth="0.5"
-                        />
-                      </svg>
-                    </div>
+                    {!requestData.file?.name && (
+                      <div>
+                        <svg
+                          width="27"
+                          height="25"
+                          viewBox="0 0 27 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.5001 0.288086V17.6214M13.5001 17.6214L18.6213 12.5892M13.5001 17.6214L8.37891 12.5892"
+                            stroke="white"
+                            strokeWidth="0.5"
+                          />
+                          <path
+                            d="M0.5 19.9854H26.5"
+                            stroke="white"
+                            strokeWidth="0.5"
+                          />
+                          <path
+                            d="M5.62109 24.7129H21.3787"
+                            stroke="white"
+                            strokeWidth="0.5"
+                          />
+                        </svg>
+                      </div>
+                    )}
                   </div>
                   <input
                     type="file"
                     id="file"
+                    onChange={(e) =>
+                      setRequestData((prev) => {
+                        return { ...prev, file: e.target.files[0] };
+                      })
+                    }
                     name="file"
                     className={style.fileInputa}
                     accept=".pdf,.doc,.docx,.txt"
@@ -151,6 +214,12 @@ export default function Request() {
                   className={style.input}
                   placeholder="Вставьте ссылку куда отправить ответную весточку"
                   name="link"
+                  value={requestData.link}
+                  onChange={(e) =>
+                    setRequestData((prev) => {
+                      return { ...prev, link: e.target.value };
+                    })
+                  }
                   id="link"
                 />
               </div>
@@ -174,16 +243,25 @@ export default function Request() {
                 </p>
               </div>
               <div>
-                <p className={style.priceNumber}>10 050 000</p>
+                <p className={style.priceNumber}>
+                  {requestData.price
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+                </p>
                 <span className={style.noticeText}>
                   О каких суммах идет речь?
                 </span>
                 <input
                   type="range"
                   className={style.inputRande}
-                  min={500}
-                  defaultValue={666666}
-                  max={10000000}
+                  min={5000}
+                  max={1000000}
+                  value={requestData.price}
+                  onChange={(e) =>
+                    setRequestData((prev) => {
+                      return { ...prev, price: e.target.value };
+                    })
+                  }
                   name="price"
                   id="price"
                 />
@@ -200,7 +278,16 @@ export default function Request() {
             </div>
           </div>
         </div>
-        <button className={style.submit} type="submit">
+        <button
+          className={style.submit}
+          type="submit"
+          onClick={handleSendRequest}
+          disabled={
+            requestData.link.trim().length <= 5 ||
+            requestData.client_name.trim().length <= 5 ||
+            isLoading
+          }
+        >
           Отправить письмо
         </button>
       </form>
