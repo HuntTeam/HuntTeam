@@ -1,0 +1,24 @@
+.section {
+  width: 95%;
+  max-width: 1380px;
+  margin: auto;
+  height: 90vh;
+  max-height: 900px;
+}
+
+.blockDetails {
+  border: 1px solid white;
+}
+.article {
+  background: white;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.blockDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
